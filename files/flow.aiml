@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<aiml version="2.0">
-	<!-- insert your AIML categories here -->
-	<category>
-	    <pattern>I think I know what I what field I want to work in.</pattern>
-	    <template>Great! Let's ask a few more questions.</template>
-	</category>
-</aiml>
