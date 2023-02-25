@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<topic name="prediction">
+	    <category>
+	        <pattern>XPREDICTX</pattern>
+	        <template>
+	            <think>
+
+    	            <condition name="frontend">
+    	                <li value="5"><srai>XFRONTENDX</srai></li>
+    	            </condition>
+    	            <condition name="backend">
+    	                <li value="5"><srai>XBACKENDX</srai></li>
+    	            </condition>
+    	            <condition name="ds">
+    	                <li value="5"><srai>XDSX</srai></li>
+    	            </condition>
+    	            <condition name="sec">
+    	                <li value="5"><srai>XSECX</srai></li>
+    	            </condition>
+    	            <condition name="pm">
+    	                <li value="5"><srai>XPMX</srai></li>
+    	            </condition>
+    	            
+    	            <condition name="frontend">
+    	                <li value="4"><srai>XFRONTENDX</srai></li>
+    	            </condition>
+    	            <condition name="backend">
+    	                <li value="4"><srai>XBACKENDX</srai></li>
+    	            </condition>
+    	            <condition name="ds">
+    	                <li value="4"><srai>XDSX</srai></li>
+    	            </condition>
+    	            <condition name="sec">
+    	                <li value="4"><srai>XSECX</srai></li>
+    	            </condition>
+    	            <condition name="pm">
+    	                <li value="4"><srai>XPMX</srai></li>
+    	            </condition>
+    	            
+    	            <condition name="frontend">
+    	                <li value="3"><srai>XFRONTENDX</srai></li>
+    	            </condition>
+    	            <condition name="backend">
+    	                <li value="3"><srai>XBACKENDX</srai></li>
+    	            </condition>
+    	            <condition name="ds">
+    	                <li value="3"><srai>XDSX</srai></li>
+    	            </condition>
+    	            <condition name="sec">
+    	                <li value="3"><srai>XSECX</srai></li>
+    	            </condition>
+    	            <condition name="pm">
+    	                <li value="3"><srai>XPMX</srai></li>
+    	            </condition>
+    	            
+    	            <condition name="frontend">
+    	                <li value="2"><srai>XFRONTENDX</srai></li>
+    	            </condition>
+    	            <condition name="backend">
+    	                <li value="2"><srai>XBACKENDX</srai></li>
+    	            </condition>
+    	            <condition name="ds">
+    	                <li value="2"><srai>XDSX</srai></li>
+    	            </condition>
+    	            <condition name="sec">
+    	                <li value="2"><srai>XSECX</srai></li>
+    	            </condition>
+    	            <condition name="pm">
+    	                <li value="2"><srai>XPMX</srai></li>
+    	            </condition>
+    	            
+    	            <condition name="frontend">
+    	                <li value="1"><srai>XFRONTENDX</srai></li>
+    	            </condition>
+    	            <condition name="backend">
+    	                <li value="1"><srai>XBACKENDX</srai></li>
+    	            </condition>
+    	            <condition name="ds">
+    	                <li value="1"><srai>XDSX</srai></li>
+    	            </condition>
+    	            <condition name="sec">
+    	                <li value="1"><srai>XSECX</srai></li>
+    	            </condition>
+    	            <condition name="pm">
+    	                <li value="1"><srai>XPMX</srai></li>
+    	            </condition>
+    	            
+    	            <srai>XSORRYX</srai>
+	            
+	            </think>
+	            <get name="prediction" />
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <pattern>XFRONTENDX</pattern>
+	        <template>
+	            <think>
+	                <condition name="prediction">
+	                    <li value="unknown">
+        	                <set name="prediction">
+        	                    I recomend you look into Frontend Development.
+        	                </set>
+	                    </li>
+	                </condition>
+	            </think>
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <pattern>XBACKENDX</pattern>
+	        <template>
+	            <think>
+	                <condition name="prediction">
+	                    <li value="unknown">
+        	                <set name="prediction">
+        	                    I recomend you look into Backend Development.
+        	                </set>
+	                    </li>
+	                </condition>
+	            </think>
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <pattern>XPMX</pattern>
+	        <template>
+	            <think>
+	                <condition name="prediction">
+	                    <li value="unknown">
+        	                <set name="prediction">
+        	                    I recomend you look into Project Management.
+        	                </set>
+	                    </li>
+	                </condition>
+	            </think>
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <pattern>XDSX</pattern>
+	        <template>
+	            <think>
+	                <condition name="prediction">
+	                    <li value="unknown">
+        	                <set name="prediction">
+        	                    I recomend you look into Data Science.
+        	                </set>
+	                    </li>
+	                </condition>
+	            </think>
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <pattern>XSECX</pattern>
+	        <template>
+	            <think>
+	                <condition name="prediction">
+	                    <li value="unknown">
+        	                <set name="prediction">
+        	                    I recomend you look into Cybersecurity.
+        	                </set>
+	                    </li>
+	                </condition>
+	            </think>
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <pattern>XSORRYX</pattern>
+	        <template>
+	            <think>
+	                <condition name="prediction">
+	                    <li value="unknown">
+        	                <set name="prediction">
+        	                    I'm sorry, I wasn't able to create a good enough recomendation.
+        	                </set>
+	                    </li>
+	                </condition>
+	            </think>
+	        </template>
+	    </category>
+	</topic>
+</aiml>

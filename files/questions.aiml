@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<topic name="questions">
+	    <category>
+	        <pattern>QUESTION</pattern>
+	        <template>
+	            <br />
+                <br />
+                <think>
+                    <set name="count">
+                        <map name="successor"><get name="count" /></map>
+                    </set>
+                </think>
+	            <condition name="count">
+    	            <li value="1">
+    	                <random>
+    	                    <li>
+                                <think><set name="question">1</set></think>
+                                Do you like to create things you can see?
+                            </li>
+                            <li>
+                        	    <think><set name="question">2</set></think>
+                        	    Do you like solving complex problems?
+                        	</li>
+                            <li>
+                                <think><set name="question">3</set></think>
+                            	Are you okay with not having a clear path to solving the problems given to you?
+                            </li>
+	                   </random>
+    	            </li>
+    	            <li value="2">
+                        <random>
+                            <li>
+                                <think><set name="question">4</set></think>
+                                Do you like working with people?
+                            </li>
+                        	<li>
+                        	    <think><set name="question">5</set></think>
+                        	    Do you like learning new things?
+                            </li>
+                        	<li>
+                        	    <think><set name="question">6</set></think>
+                        	    Do you like math?
+                            </li>
+                        </random>
+                    </li>
+                    <li value="3">
+                        <random>
+                            <li>
+                        	    <think><set name="question">7</set></think>
+                        	    Do you love to code?
+                            </li>
+                            <li>
+                        	    <think><set name="question">8</set></think>
+                        	    Do you have attention to detail?
+                            </li>
+                            <li>
+                        	    <think><set name="question">9</set></think>
+                        	    Are you able to stand up for what's important, even if higher ups disagree with you?
+                            </li>
+                        </random>
+                    </li>
+                    <li value="4">
+                        <random>
+                            <li>
+                                <think><set name="question">10</set></think>
+                                Do you like to work with data?
+                            </li>
+                            <li>
+                                <think><set name="question">11</set></think>
+                                Do you like to have a large variety of tasks?
+                            </li>
+                            <li>
+                                <think><set name="question">12</set></think>
+                                Do you like to give presentations?
+                            </li>
+                        </random>
+                    </li>
+                    <li>
+                        <think><set name="topic">prediction</set></think>
+                        <srai>XPREDICTX</srai>
+                    </li>
+                </condition>
+    	    </template>
+	    </category>
+	</topic>
+</aiml>
