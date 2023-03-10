@@ -1,165 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 	<topic name="questions">
-	    	    <category>
+	    <category>
 	        <pattern>^ <set>yes</set> ^</pattern>
 	        <template>
 	            <condition name="question">
-	                <!-- Do you like to create things you can see? -->
-	                <li value="1">
-	                    I'm a visual person too.
-	                    <think>
-                            <set name="frontend">
-                                <map name="successor"><get name="frontend" /></map>
-                            </set>
-                        </think>
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you like solving complex problems? -->
-	                <li value="2">
-	                    That's good! That will help you no matter what field you choose.
-	                    <think>
-                            <set name="backend">
-                                <map name="successor"><get name="backend" /></map>
-                            </set>
-                            <set name="ds">
-                                <map name="successor"><get name="ds" /></map>
-                            </set>
-                        </think>
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you mind not having a clear path to solving the problems given to you? -->
-	                <li value="3">
-	                    Good for you! Personally, I love clear instructions, but I'm glad that works for you.
-	                    <think>
-                            <set name="pm">
-                                <map name="successor"><get name="pm" /></map>
-                            </set>
-                            <set name="sec">
-                                <map name="successor"><get name="sec" /></map>
-                            </set>
-                        </think>
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you like working with people? -->
-	                <li value="4">
-	                    Me too! That's all I do actually...
-	                    <think>
-                            <set name="pm">
-                                <map name="successor"><get name="pm" /></map>
-                            </set>
-                            <set name="sec">
-                                <map name="successor"><get name="sec" /></map>
-                            </set>
-                            <set name="ds">
-                                <map name="successor"><get name="ds" /></map>
-                            </set>
-                        </think>
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you like learning new things? -->
-	                <li value="5">
-	                    Enjoying learning benefit you greatly.
-	                    <think>
-                            <set name="frontend">
-                                <map name="successor"><get name="frontend" /></map>
-                            </set>
-                            <set name="sec">
-                                <map name="successor"><get name="sec" /></map>
-                            </set>
-                        </think>
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you like math? -->
-	                <li value="6">
-	                    Great! I love math. Maybe that's because I'm a computer though...
-	                    <think>
-                            <set name="ds">
-                                <map name="successor"><get name="ds" /></map>
-                            </set>
-                            <set name="backend">
-                                <map name="successor"><get name="backend" /></map>
-                            </set>
-                        </think>
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you love to code? -->
-	                <li value="7">
-	                    if (userLikesToCode) letThemCode()
-	                    <think>
-                            <set name="frontend">
-                                <map name="successor"><get name="frontend" /></map>
-                            </set>
-                            <set name="backend">
-                                <map name="successor"><get name="backend" /></map>
-                            </set>
-                        </think>
-                        <srai>QUESTION</srai>
-	                </li>
-	                <li value="8">
-	                    It's the little details that matter, right?
-	                    <think>
-                            <set name="frontend">
-                                <map name="successor"><get name="frontend" /></map>
-                            </set>
-                            <set name="sec">
-                                <map name="successor"><get name="sec" /></map>
-                            </set>
-                        </think>
-                        <srai>QUESTION</srai>
-	                </li>
-	                <li value="9">
-	                    That's impressive, that can be pretty hard to do.
-	                    <think>
-                            <set name="sec">
-                                <map name="successor"><get name="sec" /></map>
-                            </set>
-                            <set name="pm">
-                                <map name="successor"><get name="pm" /></map>
-                            </set>
-                        </think>
-                        <srai>QUESTION</srai>
-	                </li>
-	                <li value="10">
-	                    I love a well formatted data file myself too.
-	                    <think>
-                            <set name="ds">
-                                <map name="successor"><get name="ds" /></map>
-                            </set>
-                            <set name="backend">
-                                <map name="successor"><get name="backend" /></map>
-                            </set>
-                        </think>
-                        <srai>QUESTION</srai>
-	                </li>
-	                <li value="11">
-	                    That will keep you from getting bored.
-	                    <think>
-                            <set name="sec">
-                                <map name="successor"><get name="sec" /></map>
-                            </set>
-                            <set name="pm">
-                                <map name="successor"><get name="pm" /></map>
-                            </set>
-                        </think>
-                        <srai>QUESTION</srai>
-	                </li>
-	                <li value="12">
-	                    Good for you. That scares me personally.
-	                    <think>
-                            <set name="ds">
-                                <map name="successor"><get name="ds" /></map>
-                            </set>
-                            <set name="pm">
-                                <map name="successor"><get name="pm" /></map>
-                            </set>
-                        </think>
-                        <srai>QUESTION</srai>
-	                </li>
-	                <li>
-	                    idk
-	                    <get name="question" />
-	                </li>
+	                <li value="XCODEX">
+        	            if (userLikesToCode) letThemCode()
+        	            <br /><br />
+        	            <srai>XMATHX</srai>
+        	        </li>
+        	        
+        	        <li value="XPEOPLEX">
+        	            Me too! That's all I do actually...
+        	            <br /><br />
+        	            <think><set name="topic">prediction</set></think>
+        	            <srai>XPMX</srai>
+        	        </li>
+        	        
+        	        <li value="XMATHX">
+        	            Great! I love math. Maybe that's because I'm a computer though...
+        	            <br /><br />
+        	            <think><set name="topic">prediction</set></think>
+        	            <srai>XDSX</srai>
+        	        </li>
+        	        
+        	        <li value="XSEEX">
+        	            I'm a visual person too.
+        	            <br /><br />
+        	            <think><set name="topic">prediction</set></think>
+        	            <srai>XFEX</srai>
+        	        </li>
 	            </condition>
 	        </template>
 	    </category>
@@ -168,102 +39,35 @@
 	        <pattern>^ <set>no</set> ^</pattern>
 	        <template>
 	            <condition name="question">
-	                <!-- Do you like to create things you can see? -->
-	                <li value="1">
-	                    Who's the real robot here...
-	                    <think>
-                            <set name="frontend">
-                                <map name="predecessor"><get name="frontend" /></map>
-                            </set>
-                        </think>
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you like solving complex problems? -->
-	                <li value="2">
-	                    Me either.
-	                    <think>
-                            <set name="backend">
-                                <map name="predecessor"><get name="backend" /></map>
-                            </set>
-                        </think>
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you mind not having a clear path to solving the problems given to you? -->
-	                <li value="3">
-	                    That makes sense. It can be hard to work like that.
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you like working with people? -->
-	                <li value="4">
-	                    Just like to put your head down and work? I can respect that.
-	                    <think>
-                            <set name="pm">
-                                <map name="predecessor"><get name="pm" /></map>
-                            </set>
-                        </think>
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you like learning new things? -->
-	                <li value="5">
-	                    Just focus on what you know. I can respect that.
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you like math? -->
-	                <li value="6">
-	                    I have to pretend to agree with you...
-	                    <think>
-                            <set name="ds">
-                                <map name="predecessor"><get name="ds" /></map>
-                            </set>
-                        </think>
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <!-- Do you love to code? -->
-	                <li value="7">
-	                    Who'd want to stare at a screen all day anyways.
-	                    <think>
-                            <set name="frontend">
-                                <map name="predecessor"><get name="frontend" /></map>
-                            </set>
-                            <set name="backend">
-                                <map name="predecessor"><get name="backend" /></map>
-                            </set>
-                        </think>
-                        <srai>QUESTION</srai>
-	                </li>
-	                <li value="8">
-	                    So you're a big picture person, then.
-                        <srai>QUESTION</srai>
-	                </li>
-	                <li value="9">
-	                    That's okay, it can be pretty hard to do.
-	                    <think>
-	                        <set name="sec">
-	                            <map name="predecessor"><get name="sec" /></map>
-	                        </set>
-	                    </think>
-	                    <srai>QUESTION</srai>
-	                </li>
-	                <li value="10">
-	                    That can definately be boring.
-                        <srai>QUESTION</srai>
-	                </li>
-	                <li value="11">
-	                    I agree. I prefer focusing on what I'm good at.
-                        <srai>QUESTION</srai>
-	                </li>
-	                <li value="12">
-	                    I agree with you. Presentations scare me.
-                        <srai>QUESTION</srai>
-	                </li>
-	                <li>
-	                    idk
-	                    <get name="question" />
-	                </li>
+	                <li value="XCODEX">
+        	            Who'd want to stare at a screen all day anyways.
+        	            <br /><br />
+        	            <srai>XPEOPLEX</srai>
+        	        </li>
+        	        
+        	        <li value="XPEOPLEX">
+        	            People are scary.
+        	            <br /><br />
+        	            <think><set name="topic">prediction</set></think>
+        	            <srai>XSECX</srai>
+        	        </li>
+        	        
+        	        <li value="XMATHX">
+        	            My programming tells me I have to pretend to agree with you...
+        	            <br /><br />
+        	            <srai>XSEEX</srai>
+        	        </li>
+        	        
+        	        <li value="XSEEX">
+        	            Who's the real robot here...
+        	            <br /><br />
+        	            <think><set name="topic">prediction</set></think>
+        	            <srai>XBEX</srai>
+        	        </li>
 	            </condition>
 	        </template>
 	    </category>
-	    
+
 	    <category>
 	        <pattern>*</pattern>
 	        <template>Sorry, I don't understand, try rephrasing your answer.</template>

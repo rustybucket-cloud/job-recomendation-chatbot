@@ -7,22 +7,6 @@
             Hi! I'm the IT career recommender. I'm here to help you pick a career! How are you today?
         </template>
     </category>
-    <!--<category>-->
-    <!--    <pattern>HELLO *</pattern>-->
-    <!--    <template><srai>HELLO</srai></template>-->
-    <!--</category>-->
-    <!--<category>-->
-    <!--    <pattern>HI *</pattern>-->
-    <!--    <template><srai>HELLO</srai></template>-->
-    <!--</category>-->
-    <!--<category>-->
-    <!--    <pattern>HOW ARE YOU *</pattern>-->
-    <!--    <template><srai>HELLO*</srai></template>-->
-    <!--</category>-->
-    <!--<category>-->
-    <!--    <pattern>HOWS IT GOING *</pattern>-->
-    <!--    <template><srai>HELLO*</srai></template>-->
-    <!--</category>-->
     
     <topic name="INTRO">
         <category>
@@ -72,16 +56,9 @@
             <template>
                 <think>
                     <set name="topic">questions</set>
-	                <set name="backend">0</set>
-	                <set name="frontend">0</set>
-	                <set name="ds">0</set>
-	                <set name="pm">0</set>
-	                <set name="sec">0</set>
-	                <set name="count">0</set>
-	                <set name="prediction">unknown</set>
                 </think>
-                Great! Let's get started.
-                <srai>QUESTION</srai>
+                Great! Let's get started.<br />
+                <srai>XSTARTX</srai>
             </template>
         </category>
         

@@ -2,185 +2,110 @@
 <aiml version="2.0">
 	<topic name="prediction">
 	    <category>
-	        <pattern>XPREDICTX</pattern>
-	        <template>
-	            <think>
-
-    	            <condition name="frontend">
-    	                <li value="5"><srai>XFRONTENDX</srai></li>
-    	            </condition>
-    	            <condition name="backend">
-    	                <li value="5"><srai>XBACKENDX</srai></li>
-    	            </condition>
-    	            <condition name="ds">
-    	                <li value="5"><srai>XDSX</srai></li>
-    	            </condition>
-    	            <condition name="sec">
-    	                <li value="5"><srai>XSECX</srai></li>
-    	            </condition>
-    	            <condition name="pm">
-    	                <li value="5"><srai>XPMX</srai></li>
-    	            </condition>
-    	            
-    	            <condition name="frontend">
-    	                <li value="4"><srai>XFRONTENDX</srai></li>
-    	            </condition>
-    	            <condition name="backend">
-    	                <li value="4"><srai>XBACKENDX</srai></li>
-    	            </condition>
-    	            <condition name="ds">
-    	                <li value="4"><srai>XDSX</srai></li>
-    	            </condition>
-    	            <condition name="sec">
-    	                <li value="4"><srai>XSECX</srai></li>
-    	            </condition>
-    	            <condition name="pm">
-    	                <li value="4"><srai>XPMX</srai></li>
-    	            </condition>
-    	            
-    	            <condition name="frontend">
-    	                <li value="3"><srai>XFRONTENDX</srai></li>
-    	            </condition>
-    	            <condition name="backend">
-    	                <li value="3"><srai>XBACKENDX</srai></li>
-    	            </condition>
-    	            <condition name="ds">
-    	                <li value="3"><srai>XDSX</srai></li>
-    	            </condition>
-    	            <condition name="sec">
-    	                <li value="3"><srai>XSECX</srai></li>
-    	            </condition>
-    	            <condition name="pm">
-    	                <li value="3"><srai>XPMX</srai></li>
-    	            </condition>
-    	            
-    	            <condition name="frontend">
-    	                <li value="2"><srai>XFRONTENDX</srai></li>
-    	            </condition>
-    	            <condition name="backend">
-    	                <li value="2"><srai>XBACKENDX</srai></li>
-    	            </condition>
-    	            <condition name="ds">
-    	                <li value="2"><srai>XDSX</srai></li>
-    	            </condition>
-    	            <condition name="sec">
-    	                <li value="2"><srai>XSECX</srai></li>
-    	            </condition>
-    	            <condition name="pm">
-    	                <li value="2"><srai>XPMX</srai></li>
-    	            </condition>
-    	            
-    	            <condition name="frontend">
-    	                <li value="1"><srai>XFRONTENDX</srai></li>
-    	            </condition>
-    	            <condition name="backend">
-    	                <li value="1"><srai>XBACKENDX</srai></li>
-    	            </condition>
-    	            <condition name="ds">
-    	                <li value="1"><srai>XDSX</srai></li>
-    	            </condition>
-    	            <condition name="sec">
-    	                <li value="1"><srai>XSECX</srai></li>
-    	            </condition>
-    	            <condition name="pm">
-    	                <li value="1"><srai>XPMX</srai></li>
-    	            </condition>
-    	            
-    	            <srai>XSORRYX</srai>
-	            
-	            </think>
-	            <get name="prediction" />
-	        </template>
-	    </category>
-	    
-	    <category>
-	        <pattern>XFRONTENDX</pattern>
-	        <template>
-	            <think>
-	                <condition name="prediction">
-	                    <li value="unknown">
-        	                <set name="prediction">
-        	                    I recomend you look into Frontend Development.
-        	                </set>
-	                    </li>
-	                </condition>
-	            </think>
-	        </template>
-	    </category>
-	    
-	    <category>
-	        <pattern>XBACKENDX</pattern>
-	        <template>
-	            <think>
-	                <condition name="prediction">
-	                    <li value="unknown">
-        	                <set name="prediction">
-        	                    I recomend you look into Backend Development.
-        	                </set>
-	                    </li>
-	                </condition>
-	            </think>
-	        </template>
-	    </category>
-	    
-	    <category>
-	        <pattern>XPMX</pattern>
-	        <template>
-	            <think>
-	                <condition name="prediction">
-	                    <li value="unknown">
-        	                <set name="prediction">
-        	                    I recomend you look into Project Management.
-        	                </set>
-	                    </li>
-	                </condition>
-	            </think>
-	        </template>
-	    </category>
-	    
-	    <category>
 	        <pattern>XDSX</pattern>
 	        <template>
-	            <think>
-	                <condition name="prediction">
-	                    <li value="unknown">
-        	                <set name="prediction">
-        	                    I recomend you look into Data Science.
-        	                </set>
-	                    </li>
-	                </condition>
-	            </think>
+	            I recommend you become a data scientist.
+	            <srai>XISCORRECTX</srai>
 	        </template>
+	    </category>
+	    
+	    <category>
+	        <pattern>XFEX</pattern>
+	        <template>
+	            I recommend you become a React engineer.
+	            <srai>XISCORRECTX</srai>
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <pattern>XBEX</pattern>
+	        <template>
+	            I recommend you become a Java engineer.
+                <srai>XISCORRECTX</srai>
+            </template>
 	    </category>
 	    
 	    <category>
 	        <pattern>XSECX</pattern>
 	        <template>
-	            <think>
-	                <condition name="prediction">
-	                    <li value="unknown">
-        	                <set name="prediction">
-        	                    I recomend you look into Cybersecurity.
-        	                </set>
-	                    </li>
-	                </condition>
-	            </think>
+                I recommend you become a Cybersecurity engineer.
+                <srai>XISCORRECTX</srai>
 	        </template>
 	    </category>
 	    
 	    <category>
-	        <pattern>XSORRYX</pattern>
-	        <template>
-	            <think>
-	                <condition name="prediction">
-	                    <li value="unknown">
-        	                <set name="prediction">
-        	                    I'm sorry, I wasn't able to create a good enough recomendation.
-        	                </set>
-	                    </li>
-	                </condition>
-	            </think>
+	        <pattern>XPMX</pattern>
+            <template>
+	            I recommend you become a software project manager.
+	            <srai>XISCORRECTX</srai>
 	        </template>
+	    </category>
+	    
+	    <category>
+	        <pattern>XISCORRECTX</pattern>
+	        <template>
+	            <br /><br />
+	            Do you think this suggestion makes sense?
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <that>DO YOU THINK THIS SUGGESTION MAKES SENSE</that>
+	        <pattern>^ <set>yes</set> ^</pattern>
+	        <template>
+	            <srai>XTHANKYOUX</srai>
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <that>DO YOU THINK THIS SUGGESTION MAKES SENSE</that>
+	        <pattern>^ <set>no</set> ^</pattern>
+	        <template>
+	            I'm sorry. You can leave suggestions for how I can improve when I ask for feedback.
+	            <srai>XTHANKYOUX</srai>
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <pattern>XTHANKYOUX</pattern>
+	        <template>
+	            <br /><br />
+	            Thank you for chatting with me. How would you rate our conversation?
+	            <button>
+	                <text>1</text>
+	                <postback>XRATINGX</postback>
+	            </button>
+	            <button>
+	                <text>2</text>
+	                <postback>XRATINGX</postback>
+	            </button>
+	            <button>
+	                <text>3</text>
+	                <postback>XRATINGX</postback>
+	            </button>
+	            <button>
+	                <text>4</text>
+	                <postback>XRATINGX</postback>
+	            </button>
+	            <button>
+	                <text>5</text>
+	                <postback>XRATINGX</postback>
+	            </button>
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <pattern>XRATINGX</pattern>
+	        <template>
+	            If you have any feedback from our conversation, feel free to leave it now.
+	        </template>
+	    </category>
+	    
+	    <category>
+	        <that>IF YOU HAVE ANY FEEDBACK FROM OUR CONVERSATION, FEEL FREE TO LEAVE IT NOW</that>
+	        <pattern>*</pattern>
+	        <template>Thank you for your feedback.</template>
+	        <think><set name="topic">unknown</set></think>
 	    </category>
 	</topic>
 </aiml>
